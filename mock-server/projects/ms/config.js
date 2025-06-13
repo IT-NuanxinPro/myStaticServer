@@ -20,6 +20,7 @@ module.exports = {
     // 商品列表（带分页）
     '/goods/list': {
       method: 'GET',
+      description: '商品列表',
       handler: createPaginationHandler(
         path.join(mockPath, 'goodsList.json'),
         {
@@ -31,6 +32,7 @@ module.exports = {
     // 地址搜索
     '/wdt-api/searchAddr': {
       method: 'POST',
+      description: '沃地图地址搜索',
       file: 'searchAddr',
       requestBody: {
         required: ['searchedAddr']

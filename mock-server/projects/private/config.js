@@ -21,8 +21,12 @@ module.exports = {
   },
   routes: {
     '/user/protocolAddress': {
-      method: 'GET',
-      file: 'address'
+      method: 'POST',
+      file: 'address',
+      description: '微信公众号获取协议地址',
+      requestBody: {
+        required: ['protocolType']
+      }
     },
   }
 }; 
