@@ -20,7 +20,7 @@ module.exports = {
     '/transfer/getBookMainList': {
       method: 'POST',
       file: 'bookMainList',
-      requestQuery: {
+      requestBody: {
         required: ['isAddBook', 'login', 'naturalCust'],
         optional: ['pageNo', 'pageSize']
       },

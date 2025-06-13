@@ -21,8 +21,11 @@ module.exports = {
   },
   routes: {
     '/user/protocolAddress': {
-      method: 'GET',
-      file: 'address'
+      method: 'POST',
+      file: 'address',
+      requestBody: {
+        required: ['protocolType']
+      }
     },
   }
 }; 
