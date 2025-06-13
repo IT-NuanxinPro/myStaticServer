@@ -1,0 +1,31 @@
+    location ~^/custBookH5 {
+        proxy_pass http://10.188.58.230:8082;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+    }
+
+    location ~^/custBookStatic/ {
+        proxy_buffer_size 128k;
+        proxy_buffers 32 32k;
+        proxy_busy_buffers_size 128k;
+        proxy_set_header X-Forwarded-Proto $scheme;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_pass http://10.188.58.230:8082$request_uri;
+    }
+
+    location /custbookApi/ {
+        proxy_pass http://10.188.58.230:8081;
+        proxy_set_header Host $host;
+        proxy_set_header X-Real-IP $remote_addr;
+        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        proxy_set_header X-Forwarded-Proto $scheme;
+
+        # 跨域资源共享（CORS）设置
+        add_header Access-Control-Allow-Origin * always;
+        add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS' always;
+        add_header Access-Control-Allow-Headers 'DNT,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Range' always;
+        add_header Access-Control-Expose-Headers 'Content-Length,Content-Range' always;
+    }

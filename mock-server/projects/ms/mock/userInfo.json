@@ -1,0 +1,10 @@
+{
+  "userInfo": {
+    "userId": "12345",
+    "username": "张三",
+    "phone": "13800138000",
+    "avatar": "https://example.com/avatar.jpg",
+    "level": "VIP1",
+    "points": 1000
+  }
+} 

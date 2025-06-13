@@ -1,0 +1,205 @@
+{
+  "total": 50,
+  "list": [
+    {
+      "id": "1",
+      "name": "iPhone 15 Pro Max",
+      "price": 9999,
+      "image": "https://example.com/iphone15.jpg",
+      "stock": 100,
+      "category": "手机",
+      "description": "最新款苹果手机",
+      "sales": 500
+    },
+    {
+      "id": "2",
+      "name": "MacBook Pro M3",
+      "price": 12999,
+      "image": "https://example.com/macbook.jpg",
+      "stock": 50,
+      "category": "笔记本",
+      "description": "搭载M3芯片的MacBook",
+      "sales": 200
+    },
+    {
+      "id": "3",
+      "name": "iPad Pro",
+      "price": 6999,
+      "image": "https://example.com/ipad.jpg",
+      "stock": 80,
+      "category": "平板",
+      "description": "专业级平板电脑",
+      "sales": 300
+    },
+    {
+      "id": "4",
+      "name": "AirPods Pro",
+      "price": 1999,
+      "image": "https://example.com/airpods.jpg",
+      "stock": 200,
+      "category": "配件",
+      "description": "主动降噪耳机",
+      "sales": 1000
+    },
+    {
+      "id": "5",
+      "name": "Apple Watch Series 9",
+      "price": 3999,
+      "image": "https://example.com/watch.jpg",
+      "stock": 150,
+      "category": "智能手表",
+      "description": "最新款智能手表",
+      "sales": 400
+    },
+    {
+      "id": "6",
+      "name": "小米 14 Pro",
+      "price": 4999,
+      "image": "https://example.com/mi14.jpg",
+      "stock": 200,
+      "category": "手机",
+      "description": "小米年度旗舰",
+      "sales": 800
+    },
+    {
+      "id": "7",
+      "name": "华为 Mate 60 Pro",
+      "price": 6999,
+      "image": "https://example.com/mate60.jpg",
+      "stock": 50,
+      "category": "手机",
+      "description": "华为最新旗舰",
+      "sales": 1000
+    },
+    {
+      "id": "8",
+      "name": "RedmiBook Pro",
+      "price": 5999,
+      "image": "https://example.com/redmibook.jpg",
+      "stock": 100,
+      "category": "笔记本",
+      "description": "性价比笔记本",
+      "sales": 300
+    },
+    {
+      "id": "9",
+      "name": "OPPO Find X7",
+      "price": 4999,
+      "image": "https://example.com/findx7.jpg",
+      "stock": 150,
+      "category": "手机",
+      "description": "OPPO影像旗舰",
+      "sales": 400
+    },
+    {
+      "id": "10",
+      "name": "vivo X100 Pro",
+      "price": 5999,
+      "image": "https://example.com/x100pro.jpg",
+      "stock": 120,
+      "category": "手机",
+      "description": "vivo影像旗舰",
+      "sales": 600
+    },
+    {
+      "id": "11",
+      "name": "荣耀 Magic6 Pro",
+      "price": 5699,
+      "image": "https://example.com/magic6.jpg",
+      "stock": 180,
+      "category": "手机",
+      "description": "荣耀旗舰手机",
+      "sales": 450
+    },
+    {
+      "id": "12",
+      "name": "ThinkPad X1",
+      "price": 9999,
+      "image": "https://example.com/thinkpad.jpg",
+      "stock": 60,
+      "category": "笔记本",
+      "description": "商务笔记本",
+      "sales": 150
+    },
+    {
+      "id": "13",
+      "name": "小米平板 6 Pro",
+      "price": 3999,
+      "image": "https://example.com/mipad6.jpg",
+      "stock": 200,
+      "category": "平板",
+      "description": "性价比平板",
+      "sales": 700
+    },
+    {
+      "id": "14",
+      "name": "华为 MatePad Pro",
+      "price": 4999,
+      "image": "https://example.com/matepad.jpg",
+      "stock": 90,
+      "category": "平板",
+      "description": "华为旗舰平板",
+      "sales": 300
+    },
+    {
+      "id": "15",
+      "name": "三星 Galaxy Tab S9",
+      "price": 6999,
+      "image": "https://example.com/tabs9.jpg",
+      "stock": 70,
+      "category": "平板",
+      "description": "安卓旗舰平板",
+      "sales": 200
+    },
+    {
+      "id": "16",
+      "name": "小米手环 8 Pro",
+      "price": 399,
+      "image": "https://example.com/miband8.jpg",
+      "stock": 500,
+      "category": "智能手表",
+      "description": "智能手环",
+      "sales": 2000
+    },
+    {
+      "id": "17",
+      "name": "华为 Watch 4 Pro",
+      "price": 2999,
+      "image": "https://example.com/watch4.jpg",
+      "stock": 150,
+      "category": "智能手表",
+      "description": "华为旗舰手表",
+      "sales": 500
+    },
+    {
+      "id": "18",
+      "name": "三星 Galaxy Watch 6",
+      "price": 2499,
+      "image": "https://example.com/watch6.jpg",
+      "stock": 120,
+      "category": "智能手表",
+      "description": "安卓旗舰手表",
+      "sales": 300
+    },
+    {
+      "id": "19",
+      "name": "索尼 WH-1000XM5",
+      "price": 2699,
+      "image": "https://example.com/wh1000xm5.jpg",
+      "stock": 100,
+      "category": "配件",
+      "description": "降噪耳机",
+      "sales": 800
+    },
+    {
+      "id": "20",
+      "name": "华为 FreeBuds Pro 3",
+      "price": 1499,
+      "image": "https://example.com/freebuds3.jpg",
+      "stock": 300,
+      "category": "配件",
+      "description": "无线耳机",
+      "sales": 1200
+    }
+  ]
+} 

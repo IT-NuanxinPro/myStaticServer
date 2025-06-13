@@ -1,0 +1,26 @@
+{
+  "UNI_BSS_BODY": {
+    "POI_RETRIEVAL_RSP": {
+      "message": "ok",
+      "results": [
+        {
+          "address": "天津市河西区微山路",
+          "name": "华山里",
+          "location": {
+            "lng": 117.270896,
+            "lat": 39.070588
+          }
+        },
+        {
+          "address": "天津市河西区曲江路",
+          "name": "华山里-南门",
+          "location": {
+            "lng": 117.271404,
+            "lat": 39.069568
+          }
+        }
+      ],
+      "total": 2
+    }
+  }
+} 
