@@ -23,6 +23,7 @@ module.exports = {
     '/user/protocolAddress': {
       method: 'POST',
       file: 'address',
+      description: '微信公众号获取协议地址',
       requestBody: {
         required: ['protocolType']
       }

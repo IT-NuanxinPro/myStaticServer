@@ -20,6 +20,7 @@ module.exports = {
     '/transfer/getBookMainList': {
       method: 'POST',
       file: 'bookMainList',
+      description: '政企电话本主查询列表',
       requestBody: {
         required: ['isAddBook', 'login', 'naturalCust'],
         optional: ['pageNo', 'pageSize']
@@ -34,6 +35,7 @@ module.exports = {
     // 下载政企电话本nginx配置
     '/download/nginx-config': {
       method: 'GET',
+      description: '下载政企电话本nginx配置',
       handler: createDownloadHandler(downloadPath, {
         getFilePath: (req, basePath) => path.join(basePath, '政企电话本生产ngin转发.txt'),
         getFileName: () => '政企电话本生产nginx配置.txt'
@@ -43,6 +45,7 @@ module.exports = {
     // 下载号码摸查模版
     '/download/phone-search-template': {
       method: 'POST',
+      description: '下载号码摸查模版',
       handler: createDownloadHandler(downloadPath, {
         getFilePath: (req, basePath) => path.join(basePath, '号码摸查模版.xlsx'),
         getFileName: () => '号码摸查模版.xlsx'

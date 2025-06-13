@@ -113,8 +113,13 @@
                   <span>前缀：</span>
                   <span class="prefix-value">{{ apiGroups[selectedGroup]?.prefix || ' ' }}</span>
                 </div>
+                <div class="meta-item description" v-if="selectedApi.description">
+                  <el-icon><Document /></el-icon>
+                  <span>接口名称：</span>
+                  <span class="description-value">{{ selectedApi.description }}</span>
+                </div>
                 <div class="meta-item url">
-                  <el-icon><Link /></el-icon>
+                  <el-icon   @click="openApiUrl"><Link /></el-icon>
                   <span>完整地址：</span>
                   <el-tooltip
                     :content="getFullPath(selectedApi)"
@@ -331,6 +336,17 @@ onMounted(() => {
 onBeforeUnmount(() => {
   window.removeEventListener('resize', checkMobile)
 })
+
+const getFullUrl = (path) => {
+  const host = window.location.host;
+  return `http://${host}${path}`;
+}
+
+const openApiUrl = () => {
+  const host = window.location.host;
+  const url = `http://${host}${getFullPath(selectedApi.value)}`;
+  window.open(url, '_blank');
+}
 </script>
 
 <style lang="scss" scoped>
@@ -564,7 +580,7 @@ onBeforeUnmount(() => {
             gap: $spacing-small;
             color: $text-secondary;
             
-            &.prefix, &.url {
+            &.prefix, &.url, &.description {
               background-color: $bg-light;
               padding: $spacing-small $spacing-base;
               border-radius: $border-radius-base;
@@ -574,7 +590,7 @@ onBeforeUnmount(() => {
                 background-color: darken($bg-light, 2%);
               }
               
-              .prefix-value, .url-value {
+              .prefix-value, .url-value, .description-value {
                 font-family: monospace;
                 color: $text-primary;
                 word-break: break-all;
@@ -788,7 +804,7 @@ onBeforeUnmount(() => {
         
         .api-meta {
           .meta-item {
-            &.prefix, &.url {
+            &.prefix, &.url, &.description {
               padding: $spacing-mini $spacing-small;
               font-size: $font-size-small;
             }
@@ -801,5 +817,24 @@ onBeforeUnmount(() => {
       }
     }
   }
+}
+
+.description {
+  color: #666;
+  font-size: 14px;
+}
+
+.api-link {
+  color: #409EFF;
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.api-link:hover {
+  color: #66b1ff;
+}
+
+.api-link i {
+  font-size: 16px;
 }
 </style> 

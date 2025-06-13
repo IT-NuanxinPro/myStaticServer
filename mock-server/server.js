@@ -52,6 +52,7 @@ class Server {
           routes: Object.entries(config.routes).map(([path, routeInfo]) => ({
             path,
             method: routeInfo.method,
+            description: routeInfo.description || '',
             params: {
               ...(routeInfo.requestBody && { requestBody: routeInfo.requestBody }),
               ...(routeInfo.requestQuery && { query: routeInfo.requestQuery })
@@ -96,7 +97,7 @@ class Server {
 
     this.app.use(express.static(frontendPath));
 
-    this.app.get("/docs", (req, res) => {
+    this.app.get("/api-docs", (req, res) => {
       res.sendFile(path.join(frontendPath, "index.html"));
     });
 
