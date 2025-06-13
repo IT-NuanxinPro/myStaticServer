@@ -82,6 +82,8 @@ class Server {
 
   start() {
     const localIP = this.getLocalIP();
+
+    // 启动服务器
     this.app.listen(this.port, "0.0.0.0", () => {
       console.log("=== Mock Server 已启动 === ");
       console.log(`本地访问: http://127.0.0.1:${this.port}`);
@@ -89,10 +91,22 @@ class Server {
       console.log("访问根路径 / 查看API文档（由 Vue 应用提供）");
       console.log("======================");
     });
-    this.app.use(express.static(path.join(__dirname, "..", "frontend-docs", "dist")));
-    this.app.get("*", (req, res) => {
-      res.sendFile(path.join(__dirname, "..", "frontend-docs", "dist", "index.html"));
+
+    // 设置前端路由处理
+    const frontendPath = path.join(__dirname, "..", "frontend-docs", "dist");
+
+    // 处理静态资源
+    this.app.use(express.static(frontendPath));
+
+    // 处理根路径
+    this.app.get("/", (req, res) => {
+      res.sendFile(path.join(frontendPath, "index.html"));
     });
+
+    // 处理其他前端路由
+    // this.app.get(/^(?!\/ms|\/api-list|\/user)/, (req, res) => {
+    //   res.sendFile(path.join(frontendPath, "index.html"));
+    // });
   }
 }
 
