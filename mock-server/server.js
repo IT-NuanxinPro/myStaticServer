@@ -20,7 +20,6 @@ class Server {
 
   async initializeProjects() {
     try {
-      // 先注册API列表路由
       this.app.get("/api-list", this.getApiList.bind(this));
 
       const projects = await fs.readdir(this.projectsPath);
