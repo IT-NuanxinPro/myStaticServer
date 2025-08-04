@@ -31,7 +31,7 @@ my-static-server/
 │   │   └── fileReader.js    # 文件读取工具
 │   ├── projects/            # 项目配置目录
 │   │   ├── ms/              # 示例项目：商城系统
-│   │   ├── custBook/        # 示例项目：政企电话本
+│   │   ├── custBook/        # 示例项目：电话本
 │   │   ├── intelligent-penetration/  # 示例项目：智能渗透
 │   │   └── private/         # 示例项目：私有项目
 │   └── package.json
