@@ -28,5 +28,13 @@ module.exports = {
         required: ['protocolType']
       }
     },
+    '/user/agreeProtocol': {
+      method: 'POST',
+      file: 'agreeProtocol',
+      description: '用户同意协议',
+      requestBody: {
+        required: ['protocolType']
+      }
+    }
   }
 }; 
